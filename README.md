@@ -1,32 +1,29 @@
-# React + TypeScript + Vite
+# StockPilot Pro - Intelligent Inventory & Order Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+StockPilot Pro is a standalone Windows desktop application designed for medium-sized distribution companies. It centralizes inventory operations, tracks stock movements across multiple warehouses, manages customer orders, and provides real-time analytics.
 
-Currently, two official plugins are available:
+## Core Features
+- **Inventory Management:** Register, edit, and delete products with SKU validation and stock tracking.
+- **Multi-Warehouse Transfers:** Securely transfer stock between warehouses using atomic SQLite transactions to ensure data consistency.
+- **Order Management:** Create customer orders, manage a shopping cart, calculate totals automatically, and process orders to deduct stock.
+- **Stock Movement Tracking:** An immutable transaction history logs every sale, transfer, and adjustment.
+- **Automated Low-Stock Alerts:** Automatically flags products approaching their minimum stock threshold with "Low" or "Critical" severities.
+- **Analytics Dashboard:** Interactive Chart.js visualizations showing 7-day revenue and product distribution by category.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technology Stack
+- **Electron.js** (Desktop Runtime)
+- **React + Vite** (Frontend UI)
+- **TypeScript** (Strongly-typed logic)
+- **Node.js** (Backend Process)
+- **SQLite (better-sqlite3)** (Local Relational Database)
+- **Chart.js** (Data Visualization)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+You need [Node.js](https://nodejs.org/) installed on your computer.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Adijah6838/StockPilotPro.git
